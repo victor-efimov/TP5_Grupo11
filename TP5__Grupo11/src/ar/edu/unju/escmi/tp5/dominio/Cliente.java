@@ -5,24 +5,34 @@ import ar.edu.unju.escmi.tp5.collections.CollectionFactura;
 public class Cliente {
     protected int dni;
     protected String nombre;
+    protected String apellido;
     protected String domicilio;
 
     public Cliente() {
     	
     }
 
-    public Cliente(int dni, String nombre, String domicilio) {
+    public Cliente(int dni, String nombre, String apellido, String domicilio) {
         this.dni = dni;
         this.nombre = nombre;
         this.domicilio = domicilio;
     }
 
     // Getters y Setters
+    
     public int getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public void setDni(int dni) {
         this.dni = dni;
     }
 
@@ -55,6 +65,7 @@ public class Cliente {
         return "Cliente{" +
                 "dni=" + dni +
                 ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
                 ", domicilio='" + domicilio + '\'' +
                 '}';
     }
