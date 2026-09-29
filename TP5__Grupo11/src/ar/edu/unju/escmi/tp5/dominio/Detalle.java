@@ -6,8 +6,19 @@ public class Detalle {
     private double precioUnitario;
     private int descuento;
     private String descripcion;
+<<<<<<< HEAD
+=======
+    
+    public String getDescripcion() {
+		return descripcion;
+	}
+>>>>>>> f42b460a1175ab14431151aa0be76e2abc0a1122
 
-    public Detalle() {
+	public void setDescripcion(String detalle) {
+		this.descripcion = detalle;
+	}
+
+	public Detalle() {
     }
 
     public Detalle(int cantidad, int codigoProducto, double precioUnitario, int descuento, String descripcion) {
@@ -17,6 +28,7 @@ public class Detalle {
         this.descuento = descuento;
         this.descripcion = descripcion;
     }
+    
 
     public double calcularImporte() {
         double subtotal = this.cantidad * this.precioUnitario;
@@ -67,6 +79,10 @@ public class Detalle {
     }
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descripcion=" + descripcion + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+=======
+        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descripcion=$" + descripcion + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+>>>>>>> f42b460a1175ab14431151aa0be76e2abc0a1122
     }
 }
