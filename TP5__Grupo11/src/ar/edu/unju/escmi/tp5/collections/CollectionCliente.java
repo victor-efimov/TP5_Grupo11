@@ -20,8 +20,8 @@ public class CollectionCliente {
     }
  
     public static void precargarCliente() {
-        guardarCliente(new ClienteMayorista(123, "Pérez, Carlos", "Av. Siempre Viva", 1001));
-        guardarCliente(new ClienteMinorista(456, "Gómez, Ana", "Calle Belgrano", "PAMI"));
-        guardarCliente(new ClienteMinorista(789, "López, Luis", "Calle Lavalle", "OSEP"));
+        guardarCliente(new ClienteMayorista(123, "Carlos","Pérez", "Av. Siempre Viva", 1001));
+        guardarCliente(new ClienteMinorista(456, "Ana","Gómez", "Calle Belgrano", "PAMI"));
+        guardarCliente(new ClienteMinorista(789, "Luis","López", "Calle Lavalle", "OSEP"));
     }
 }

@@ -6,8 +6,8 @@ public class ClienteMayorista extends Cliente {
     public ClienteMayorista() {
     }
 
-    public ClienteMayorista(int dni, String nombre, String domicilio, int codigo) {
-        super(dni, nombre, domicilio);
+    public ClienteMayorista(int dni, String nombre, String apellido, String domicilio, int codigo) {
+        super(dni, nombre, apellido , domicilio);
         this.codigo = codigo;
     }
 
@@ -27,6 +27,7 @@ public class ClienteMayorista extends Cliente {
         return "ClienteMayorista{" +
                 "dni=" + dni +
                 ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
                 ", domicilio='" + domicilio + '\'' +
                 ", codigo=" + codigo +
                 '}';

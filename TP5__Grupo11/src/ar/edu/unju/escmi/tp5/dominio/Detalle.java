@@ -5,16 +5,34 @@ public class Detalle {
     private int codigoProducto;
     private double precioUnitario;
     private int descuento;
+    private String descripcion;
+<<<<<<< HEAD
+=======
+    
+    public String getDescripcion() {
+		return descripcion;
+	}
+>>>>>>> f42b460a1175ab14431151aa0be76e2abc0a1122
 
-    public Detalle() {
+	public void setDescripcion(String detalle) {
+		this.descripcion = detalle;
+	}
+
+	public Detalle() {
     }
 
-    public Detalle(int cantidad, int codigoProducto, double precioUnitario, int descuento) {
+<<<<<<< HEAD
+    // Constructor con el orden de tu amigo (descripcion al final)
+=======
+>>>>>>> f42b460a1175ab14431151aa0be76e2abc0a1122
+    public Detalle(int cantidad, int codigoProducto, double precioUnitario, int descuento, String descripcion) {
         this.cantidad = cantidad;
         this.codigoProducto = codigoProducto;
         this.precioUnitario = precioUnitario;
         this.descuento = descuento;
+        this.descripcion = descripcion;
     }
+    
 
     public double calcularImporte() {
         double subtotal = this.cantidad * this.precioUnitario;
@@ -56,8 +74,21 @@ public class Detalle {
         this.descuento = descuento;
     }
 
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    // toString() con la estructura de tu amigo pero sin el '$' en la descripción
     @Override
     public String toString() {
-        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+<<<<<<< HEAD
+        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descripcion=" + descripcion + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+=======
+        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descripcion=$" + descripcion + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+>>>>>>> f42b460a1175ab14431151aa0be76e2abc0a1122
     }
 }
