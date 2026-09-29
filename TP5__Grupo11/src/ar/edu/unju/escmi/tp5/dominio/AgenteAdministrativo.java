@@ -31,7 +31,7 @@ public class AgenteAdministrativo extends Empleado {
         
         for (Detalle detalle : detalles) {
             factura.agregarDetalle(detalle);
-            CollectionStock.actualizarStock(detalle.getCodigoProducto(), detalle.getCantidad());
+            CollectionStock.actualizarStock(detalle.getCodigoProducto(), -detalle.getCantidad());
         }
         
         CollectionFactura.guardarFactura(factura);

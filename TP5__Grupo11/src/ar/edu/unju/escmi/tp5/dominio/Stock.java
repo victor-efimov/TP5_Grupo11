@@ -15,6 +15,7 @@ public class Stock{
             System.out.println("Error: Stock insuficiente");
             return -1;
         }
+        this.cantidad = nueva; 
         return nueva;
     }
 	public Producto getProducto() {
