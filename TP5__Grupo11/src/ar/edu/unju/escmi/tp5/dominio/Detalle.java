@@ -5,16 +5,26 @@ public class Detalle {
     private int codigoProducto;
     private double precioUnitario;
     private int descuento;
+    private String descripcion;
+    
+    public String getDescripcion() {
+		return descripcion;
+	}
 
-    public Detalle() {
+	public void setDescripcion(String detalle) {
+		this.descripcion = detalle;
+	}
+
+	public Detalle() {
     }
 
-    public Detalle(int cantidad, int codigoProducto, double precioUnitario, int descuento) {
+    public Detalle(int cantidad, int codigoProducto, double precioUnitario, int descuento, String descripcion) {
         this.cantidad = cantidad;
         this.codigoProducto = codigoProducto;
         this.precioUnitario = precioUnitario;
         this.descuento = descuento;
     }
+    
 
     public double calcularImporte() {
         double subtotal = this.cantidad * this.precioUnitario;
@@ -58,6 +68,6 @@ public class Detalle {
 
     @Override
     public String toString() {
-        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
+        return "Detalle [Cantidad=" + cantidad + ", CodigoProducto=" + codigoProducto + ", PrecioUnitario=$" + precioUnitario + ", Descripcion=$" + descripcion + ", Descuento=" + descuento + "%, Importe=$" + calcularImporte() + "]";
     }
 }
